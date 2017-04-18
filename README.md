@@ -1,9 +1,14 @@
-# api documentation for  [diskusage (v0.2.1)](https://github.com/jduncanator/node-diskusage)  [![npm package](https://img.shields.io/npm/v/npmdoc-diskusage.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-diskusage) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-diskusage.svg)](https://travis-ci.org/npmdoc/node-npmdoc-diskusage)
+# npmdoc-diskusage
+
+#### api documentation for  [diskusage (v0.2.1)](https://github.com/jduncanator/node-diskusage)  [![npm package](https://img.shields.io/npm/v/npmdoc-diskusage.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-diskusage) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-diskusage.svg)](https://travis-ci.org/npmdoc/node-npmdoc-diskusage)
+
 #### Get total diskspace and free diskspace using bindings around platform specific calls.
 
-[![NPM](https://nodei.co/npm/diskusage.png?downloads=true)](https://www.npmjs.com/package/diskusage)
+[![NPM](https://nodei.co/npm/diskusage.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/diskusage)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-diskusage/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-diskusage_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-diskusage/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-diskusage/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-diskusage/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-diskusage/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-diskusage/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-diskusage/build/screenCapture.npmPackageListing.svg)
 
@@ -50,13 +55,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "jduncanator",
-            "email": "jduncanator@hotmail.com"
+            "name": "jduncanator"
         }
     ],
     "name": "diskusage",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jduncanator/node-diskusage.git"
@@ -67,77 +70,6 @@
     "typings": "index.d.ts",
     "version": "0.2.1"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module diskusage](#apidoc.module.diskusage)
-1.  [function <span class="apidocSignatureSpan">diskusage.</span>check (path, callback)](#apidoc.element.diskusage.check)
-1.  [function <span class="apidocSignatureSpan">diskusage.</span>checkSync ()](#apidoc.element.diskusage.checkSync)
-
-
-
-# <a name="apidoc.module.diskusage"></a>[module diskusage](#apidoc.module.diskusage)
-
-#### <a name="apidoc.element.diskusage.check"></a>[function <span class="apidocSignatureSpan">diskusage.</span>check (path, callback)](#apidoc.element.diskusage.check)
-- description and source-code
-```javascript
-check = function (path, callback) {
-    try {
-        callback(undefined, native.getDiskUsage(path));
-    }
-    catch (error) {
-        callback(error, undefined);
-    }
-}
-```
-- example usage
-```shell
-...
---------
-
-''' js
-const disk = require('diskusage');
-
-let path = os.platform() === 'win32' ? 'c:' : '/';
-
-disk.check(path, function(err, info) {
-	if (err) {
-		console.log(err);
-	} else {
-		console.log(info.available);
-		console.log(info.free);
-		console.log(info.total);
-	}
-...
-```
-
-#### <a name="apidoc.element.diskusage.checkSync"></a>[function <span class="apidocSignatureSpan">diskusage.</span>checkSync ()](#apidoc.element.diskusage.checkSync)
-- description and source-code
-```javascript
-function getDiskUsage() { [native code] }
-```
-- example usage
-```shell
-...
-		console.log(info.available);
-		console.log(info.free);
-		console.log(info.total);
-	}
-});
-
-try {
-	let info = disk.checkSync(path);
-	console.log(info.available);
-	console.log(info.free);
-	console.log(info.total);
-}
-catch (err) {
-	console.log(err);
-}
-...
 ```
 
 
