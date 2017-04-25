@@ -1,6 +1,6 @@
 # npmdoc-diskusage
 
-#### api documentation for  [diskusage (v0.2.1)](https://github.com/jduncanator/node-diskusage)  [![npm package](https://img.shields.io/npm/v/npmdoc-diskusage.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-diskusage) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-diskusage.svg)](https://travis-ci.org/npmdoc/node-npmdoc-diskusage)
+#### basic api documentation for  [diskusage (v0.2.1)](https://github.com/jduncanator/node-diskusage)  [![npm package](https://img.shields.io/npm/v/npmdoc-diskusage.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-diskusage) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-diskusage.svg)](https://travis-ci.org/npmdoc/node-npmdoc-diskusage)
 
 #### Get total diskspace and free diskspace using bindings around platform specific calls.
 
@@ -68,7 +68,8 @@
         "install": "node-gyp rebuild"
     },
     "typings": "index.d.ts",
-    "version": "0.2.1"
+    "version": "0.2.1",
+    "bin": {}
 }
 ```
 
